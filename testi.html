@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="http://themes.audemedia.com/html/goodgrowth/css/owl.theme.default.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<style>
+    .testimonials {
+	 padding-top: 80px;
+}
+ .testimonials:after {
+	 content: '';
+	 position: absolute;
+	 bottom: 0;
+	 left: 0;
+	 right: 0;
+	 width: 100%;
+	 height: 30%;
+	 background-color: #ddd;
+}
+ #customers-testimonials .item-details {
+	 background-color: #333;
+	 color: #fff;
+	 padding: 20px 10px;
+	 text-align: left;
+}
+ #customers-testimonials .item-details h5 {
+	 margin: 0 0 15px;
+	 font-size: 18px;
+	 line-height: 18px;
+}
+ #customers-testimonials .item-details h5 span {
+	 color: gray;
+	 float: right;
+	 padding-right: 20px;
+	 font-size: smaller;
+}
+ #customers-testimonials .item-details p {
+	 font-size: 14px;
+}
+ #customers-testimonials .item {
+	 text-align: center;
+	 margin-bottom: 80px;
+}
+ .owl-carousel .owl-nav [class*='owl-'] {
+	 -webkit-transition: all 0.3s ease;
+	 transition: all 0.3s ease;
+}
+ .owl-carousel .owl-nav [class*='owl-'].disabled:hover {
+	 background-color: #d6d6d6;
+}
+ .owl-carousel {
+	 position: relative;
+}
+ .owl-carousel .owl-next, .owl-carousel .owl-prev {
+	 width: 50px;
+	 height: 50px;
+	 line-height: 50px;
+	 border-radius: 50%;
+	 position: absolute;
+	 top: 30%;
+	 font-size: 20px;
+	 color: rgb(5, 5, 5);
+	 border: 1px solid #ddd;
+	 text-align: center;
+}
+ .owl-carousel .owl-prev {
+	 left: -70px;
+}
+ .owl-carousel .owl-next {
+	 right: -70px;
+}
+ 
+</style>
+<body>
+    
+
+
+<section class="testimonials">
+	<div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div id="customers-testimonials" class="owl-carousel">
+
+            <!--TESTIMONIAL 1 -->
+            <div class="item">
+              <div class="shadow-effect">
+                <img class="img-responsive" src="https://www.yorku.ca/science/mathstats/wp-content/uploads/sites/62/2020/09/YU_CMSMathCamp2012-1024x768.jpeg" alt="">
+                <div class="item-details">
+									<h5>Saudian Mathematical Society<span>4 Apr, 2019</span></h5>
+									<p>Our department undertakes several outreach activities in cooperation with the Canadian Mathematical Society.</p>
+								</div>
+              </div>
+            </div>
+            <!--END OF TESTIMONIAL 1 -->
+            <!--TESTIMONIAL 2 -->
+            <div class="item">
+              <div class="shadow-effect">
+                <img class="img-responsive" src="https://www.yorku.ca/science/mathstats/wp-content/uploads/sites/62/2020/09/mathcircle_class.jpg" alt="">
+                <div class="item-details">
+									<h5>Math Circles <span>21Mar, 2021</span></h5>
+									<p>A program that brings together mathematicians and high school students from across the GTA with a keen interest in mathematics.</p>
+								</div>
+              </div>
+            </div>
+            <!--END OF TESTIMONIAL 2 -->
+            <!--TESTIMONIAL 3 -->
+            <div class="item">
+              <div class="shadow-effect">
+                <img class="img-responsive" src="https://www.yorku.ca/science/mathstats/wp-content/uploads/sites/62/2020/09/Math-Kangaroo-Gallery-2019-12.jpg" alt="">
+                <div class="item-details">
+									<h5>Math Kangaroo <span>16Jun, 2022</span></h5>
+									<p>Held in March of every year the Math Kangaroo Contest encourages the fun and creativity behind math at an early age. </p>
+								</div>
+              </div>
+            </div>
+            <!--END OF TESTIMONIAL 3 -->
+            <!--TESTIMONIAL 4 -->
+            <div class="item">
+              <div class="shadow-effect">
+                <img class="img-responsive" src="https://www.yorku.ca/science/mathstats/wp-content/uploads/sites/62/2020/09/Math-Kangaroo-Gallery-2019-12.jpg" alt="">
+                <div class="item-details">
+									<h5>Math 4 Real<span>31 Dec, 2020</span></h5>
+									<p>This is a unique program in Saudi Arabia that provides students in grades 9 to 12, to understanding essential math in real world.
+								</div>
+              </div>
+            </div>
+            <!--END OF TESTIMONIAL 4 -->
+         
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <!-- END OF TESTIMONIALS -->
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/owl.carousel.min.js"></script>
+
+<script>
+    jQuery(document).ready(function($) {
+"use strict";
+$('#customers-testimonials').owlCarousel( {
+		loop: true,
+		center: true,
+		items: 3,
+		margin: 30,
+		autoplay: true,
+		dots:true,
+    nav:true,
+		autoplayTimeout: 8500,
+		smartSpeed: 450,
+  	navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
+		responsive: {
+			0: {
+				items: 1
+			},
+			768: {
+				items: 2
+			},
+			1170: {
+				items: 3
+			}
+		}
+	});
+});
+</script>
+</body>
+
+</html>
