@@ -646,12 +646,12 @@
 }
 .site-footer img {
     display: block;
-    margin: auto;
+    
 }
 .site-footer p:nth-child(2) {
     display: block;
     margin: auto;
-    text-align: center;
+    
 }
 @media (max-width:767px)
 {
@@ -662,7 +662,13 @@
     font-weight:600
   }
 }
+
  /* End of Footer */
+ /* Modals */
+#phoneNumber {
+  display: inline-block;
+}
+ /* End of Modals */
         </style>
     </head>
     <body>
@@ -732,11 +738,11 @@
             <div class="modal-dialog modal-dialog-centered">
               <div class="modal-content">
                 <div class="modal-body">
-                  +966 (12) 6242913. 
+                  <p id="phoneNumber" styl>+966 (12) 6242913 </p> <a onclick="copyToClipboard('#phoneNumber')"><i class="far fa-copy"></i></a>
                 </div>
                 <div class="modal-footer">
                   <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
-                  <a href=""><button type="button" class="btn btn-outline-success">Yes</button>
+                  
                   </a>
                 </div>
               </div>
@@ -826,34 +832,19 @@
             <div id="carouselExampleInterval" class="carousel slide mx-auto d-block" data-ride="carousel">
                 <!-- carousel indicators -->
                 <ol class="carousel-indicators pb-5">
-                    <li data-target="#carouselExampleInterval" data-slide-to="0" class="active"></li>
-                    <li data-target="#carouselExampleInterval" data-slide-to="1"></li>
-                    <li data-target="#carouselExampleInterval" data-slide-to="2"></li>
+                    
+                    <!-- <li data-target="#carouselExampleInterval" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleInterval" data-slide-to="2"></li> -->
                 </ol>
                 <div class="carousel-inner" id="home" role="listbox">
                     <div class="carousel-item active">
                         <div id="home" class="first-section" style="background-image:url('imgs/rsz_presentation.jpg');">
-                        </div><!-- end section -->
+                        </div>
                     </div>
-                    <div class="carousel-item">
-                        <div id="home" class="first-section" style="background-image:url('imgs/student.jpg');">
-                        </div><!-- end section -->
-                    </div>
-                    <div class="carousel-item">
-                        <div id="home" class="first-section" style="background-image:url('imgs/rsz_graduation.jpg');">
-                        </div><!-- end section -->
-                    </div>
+              
                 </div>
-                <!-- left control icon -->
-                <a class="carousel-control-prev" href="#carouselExampleInterval" role="button" data-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </a>
-                <!-- right control icon -->
-                <a class="carousel-control-next" href="#carouselExampleInterval" role="button" data-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </a>
+               
+        
             </div>
             <!-- end of carousel -->
             <!-- <div id="overview" style="position:relative; top:-100px"></div> -->
@@ -1226,9 +1217,9 @@
   
             <div class="col-md-4 col-sm-6 col-xs-12">
               <ul class="social-icons">
-                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
-                <li><a class="youtube" href="#"><i class="fab fa-youtube"></i></a></li>
-                <li><a class="phone" href="#"><i class="fa fa-phone-alt"></i></a></li>
+                <li><a class="twitter" data-bs-toggle="modal" data-bs-target="#twitter"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="youtube" data-bs-toggle="modal" data-bs-target="#youtube"><i class="fab fa-youtube"></i></a></li>
+                <li><a class="phone" data-bs-toggle="modal" data-bs-target="#phone"><i class="fa fa-phone-alt"></i></a></li>
                 <li><a class="whatsapp" data-bs-toggle="modal" data-bs-target="#whatsapp"><i class="fab fa-whatsapp"></i></a></li>   
               </ul>
             </div>
@@ -1320,9 +1311,19 @@ $('#customers-testimonials').owlCarousel( {
 		}
 	});
 });
+// copy to clipboard 
+function copyToClipboard(element) {
+  var $temp = $("<input>");
+  $("body").append($temp);
+  $temp.val($(element).text()).select();
+  document.execCommand("copy");
+  $temp.remove();
+}
+
         </script>
         <!-- Award Script -->
         <script>
+
             Vue.config.devtools = true;
 
 Vue.component('card', {
