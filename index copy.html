@@ -11,7 +11,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.1.1/assets/owl.carousel.min.css">
         <!-- Awards -->
         <link href="https://fonts.googleapis.com/css?family=Playfair+Display:700|Raleway:500.700">
-        
+        <script src="https://kit.fontawesome.com/910380cf82.js" crossorigin="anonymous"></script>
         <style>
             html{
     scroll-behavior: smooth !important;
@@ -140,7 +140,7 @@
             background: #fff;
             padding: 30px;
             box-shadow: 0px 6px 17px #CFFF8D;
-            margin-top: -60px;
+            margin-top: -30px;
         }
 
         .events .card-title {
@@ -385,10 +385,11 @@
             color: #ffffff !important;
         }
         .btnLang i{
-            
+            color: #085f00;
+            z-index: 1020;
         position: fixed;
-        bottom: 3rem;
-        left: 3rem;
+        bottom: 2rem;
+        left: 2rem;
         scale: 250%;
         }
 
@@ -456,7 +457,212 @@
  .owl-carousel .owl-next {
 	 right: -70px;
 }
- 
+ /* Student Spotlights */
+.spotlight {
+    margin-bottom: 2rem;
+
+}
+.spotHead {
+    
+    border-left: 4px solid rgba(228, 211, 54, 0.699);
+}
+.spotlight iframe {
+    display: block;
+    margin-left: auto;
+    border-radius: 0.4rem;
+    background: cover;
+    height: 400px;
+    width: 600px;
+}
+.spotlight div {
+    padding-right:0;
+}
+
+
+
+ /* End of Student Spotlights */
+
+/* Footer */
+ .site-footer
+{
+  background-color:#26272b;
+  padding:45px 0 20px;
+  font-size:15px;
+  line-height:24px;
+  color:#737373;
+}
+.site-footer hr
+{
+  border-top-color:#bbb;
+  opacity:0.5
+}
+.site-footer hr.small
+{
+  margin:20px 0
+}
+.site-footer h6
+{
+  color:#fff;
+  font-size:16px;
+  text-transform:uppercase;
+  margin-top:5px;
+  letter-spacing:2px
+}
+.site-footer a
+{
+  color:#737373;
+  text-decoration:none;
+
+}
+.site-footer a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links
+{
+  padding-left:0;
+  list-style:none
+}
+.footer-links li
+{
+  display:block
+}
+.footer-links a
+{
+  color:#737373
+}
+.footer-links a:active,.footer-links a:focus,.footer-links a:hover
+{
+  color:#3366cc;
+  text-decoration:none;
+}
+.footer-links.inline li
+{
+  display:inline-block
+}
+.site-footer .social-icons
+{
+  text-align:right
+}
+.site-footer .social-icons a
+{
+  width:40px;
+  height:40px;
+  line-height:40px;
+  margin-left:6px;
+  margin-right:0;
+  border-radius:100%;
+  background-color:#33353d
+}
+.copyright-text
+{
+  margin:0
+}
+@media (max-width:991px)
+{
+  .site-footer [class^=col-]
+  {
+    margin-bottom:30px
+  }
+}
+@media (max-width:767px)
+{
+  .site-footer
+  {
+    padding-bottom:0
+  }
+  .site-footer .copyright-text,.site-footer .social-icons
+  {
+    text-align:center
+  }
+}
+.social-icons
+{
+  padding-left:0;
+  margin-bottom:0;
+  list-style:none
+}
+.social-icons li
+{
+  display:inline-block;
+  margin-bottom:4px
+}
+.social-icons li.title
+{
+  margin-right:15px;
+  text-transform:uppercase;
+  color:#96a2b2;
+  font-weight:700;
+  font-size:13px
+}
+.social-icons a{
+  background-color:#eceeef;
+  color:#818a91;
+  font-size:16px;
+  display:inline-block;
+  line-height:44px;
+  width:44px;
+  height:44px;
+  text-align:center;
+  margin-right:8px;
+  border-radius:100%;
+  -webkit-transition:all .2s linear;
+  -o-transition:all .2s linear;
+  transition:all .2s linear
+}
+.social-icons a:active,.social-icons a:focus,.social-icons a:hover
+{
+  color:#fff;
+  
+}
+.social-icons.size-sm a
+{
+  line-height:34px;
+  height:34px;
+  width:34px;
+  font-size:14px
+}
+
+.social-icons a.twitter:hover
+{
+  background-color:#00aced
+}
+.social-icons a.linkedin:hover
+{
+  background-color:#007bb6
+}
+.social-icons a.youtube:hover
+{
+  background-color:#ea4c4c
+}
+.social-icons a.phone:hover
+{
+  background-color:#e77a59
+}
+.social-icons a.whatsapp:hover
+{
+  background-color:#4cea59
+}
+.site-footer img {
+    display: block;
+    margin: auto;
+}
+.site-footer p:nth-child(2) {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+@media (max-width:767px)
+{
+  .social-icons li.title
+  {
+    display:block;
+    margin-right:0;
+    font-weight:600
+  }
+}
+ /* End of Footer */
         </style>
     </head>
     <body>
@@ -480,6 +686,62 @@
                 </div>
               </div>
         </div>
+        <div class="modal fade" id="whatsapp" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body">
+                  Click Yes to redirect you to our Whatsapp.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                  <a href=""><button type="button" class="btn btn-outline-success">Yes</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="youtube" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body">
+                  Click Yes to redirect you to our Youtube Channel.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                  <a href=""><button type="button" class="btn btn-outline-success">Yes</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="twitter" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body">
+                  Click Yes to redirect you to our Twitter Account.
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                  <a href=""><button type="button" class="btn btn-outline-success">Yes</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal fade" id="phone" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-body">
+                  +966 (12) 6242913. 
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal">Close</button>
+                  <a href=""><button type="button" class="btn btn-outline-success">Yes</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         <!-- header section -->
         <header>
             <!-- navbar -->
@@ -829,7 +1091,7 @@
                           <div class="shadow-effect">
                             <img class="img-responsive" src="https://www.yorku.ca/science/mathstats/wp-content/uploads/sites/62/2020/09/YU_CMSMathCamp2012-1024x768.jpeg" alt="">
                             <div class="item-details">
-                                                <h5>Saudian Mathematical Society<span>4 Apr, 2019</span></h5>
+                                                <h5>Saudian Mathematical Society <a href="#"><i class="fa fa-link"></i></a><span>4 Apr, 2019</span></h5>
                                                 <p>Our department undertakes several outreach activities in cooperation with the Canadian Mathematical Society.</p>
                                             </div>
                           </div>
@@ -840,8 +1102,9 @@
                           <div class="shadow-effect">
                             <img class="img-responsive" src="https://www.yorku.ca/science/mathstats/wp-content/uploads/sites/62/2020/09/mathcircle_class.jpg" alt="">
                             <div class="item-details">
-                                                <h5>Math Circles <span>21Mar, 2021</span></h5>
-                                                <p>A program that brings together mathematicians and high school students from across the GTA with a keen interest in mathematics.</p>
+                                                <h5>Math Circles <a href="#"><i class="fa fa-link"></i></a><span>21Mar, 2021</span></h5>
+                                                <p>A program that brings together mathematicians and high school students from across the GTA.</p>
+
                                             </div>
                           </div>
                         </div>
@@ -851,7 +1114,7 @@
                           <div class="shadow-effect">
                             <img class="img-responsive" src="https://www.yorku.ca/science/mathstats/wp-content/uploads/sites/62/2020/09/Math-Kangaroo-Gallery-2019-12.jpg" alt="">
                             <div class="item-details">
-                                                <h5>Math Kangaroo <span>16Jun, 2022</span></h5>
+                                                <h5>Math Kangaroo <a href="#"><i class="fa fa-link"></i></a><span>16Jun, 2022</span></h5>
                                                 <p>Held in March of every year the Math Kangaroo Contest encourages the fun and creativity behind math at an early age. </p>
                                             </div>
                           </div>
@@ -862,7 +1125,7 @@
                           <div class="shadow-effect">
                             <img class="img-responsive" src="https://www.yorku.ca/science/mathstats/wp-content/uploads/sites/62/2020/09/Math-Kangaroo-Gallery-2019-12.jpg" alt="">
                             <div class="item-details">
-                                                <h5>Math 4 Real<span>31 Dec, 2020</span></h5>
+                                                <h5>Math 4 Real <a href="#"><i class="fa fa-link"></i></a><span>31 Dec, 2020</span></h5>
                                                 <p>This is a unique program in Saudi Arabia that provides students in grades 9 to 12, to understanding essential math in real world.
                                             </div>
                           </div>
@@ -902,62 +1165,76 @@
                 </card>
                 </div>
             </section>
-        <!-- footer section -->
-        <footer>
-            <div class="container" id = "contact">
-                <div class="row  justify-content-md-center py-5">
- 
-                    <!-- contact details for the institute -->
-                      <div class="col-lg-4 col-md-4 col-xs-12 ml-5 mb-3">
-                        <div class="widget clearfix">
-                            <div class="widget-title pb-2">
-                                <h3>---- Contact Us ----</h3>
-                            </div>
-                                <div class="info">
-                                    <div class="address">
-                                        <h5><i class="fas fa-map-marker-alt mr-2"></i> Location :</h5>
-                                        <p>Faculty of Science, Building A90, 3rd Floor</p>
-                                    </div>
-                        
-                                    <div class="email">
-                                        <h5><i class="fas fa-envelope mr-2"></i> Email :</h5>
-                                        <p>sci.math@kau.edu.sa</p>
-                                    </div>
-                        
-                                    <div class="phone">
-                                        <h5><i class="fas fa-phone-alt mr-2"></i> Call :</h5>
-                                        <p>+966 (12) 6952669 </p>
-                                    </div>
-                                    <div class="Whatsapp">
-                                        <h5><i class="fas fa-phone-alt mr-2"></i> Whatsapp :</h5>
-                                        <p>+966568626948</p>
-                                    </div>
-                    
-                                </div>
-        
-                            <!-- important links -->
-                            <div class="footer-right">
-                                <ul class="footer-links-soi">
-                                    <li><a href="https://twitter.com/kau_math"><i class="fab fa-twitter fa-lg"></i>   KAU_Math</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-xs-12 mr-5 mb-3">
-                        <!-- join us form -->
-                        
+      <!-- Student Spotlight -->
+      <section class="spotlight">
+        <div class="container">
+            <div class="row" >
+                <div class="col-sm-12 col-md-6 spotHead">
+                   
 
-                                <!-- <h4 class="text-white text-center mb-3">---- Get In Touch ----</h4> -->
-                                <div class="row ">
-                                    <a class="twitter-timeline" data-lang="en" data-height="400" href="https://twitter.com/KAU_Math?ref_src=twsrc%5Etfw">Tweets by KAU_Math</a> 
-                                </div>
-                            
-                        
-                    </div>
+                        <h1>Student Spotlights</h1>
+                        <p>This video give a briefs talk about our students experiences in our Math Department which
+                            will cover student life in the university and another experiences
+                        </p>
+                    
+                </div>
+                <div class="col-sm-12 col-md-6">
+                    <iframe src="https://www.youtube.com/embed/dcya2ficWdo?autoplay=1&mute=1&controls=0">
+                    </iframe>
                 </div>
             </div>
-        </footer>
-        
+        </div>
+
+      </section>
+      <!-- Site footer -->
+      <footer class="site-footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-6">
+                <img style="width:50%;" alt="جامعة الملك عبد العزيز" src="https://marz.kau.edu.sa/Files/13009/Galleries/8551/66274_logo_kau.png" /> 
+                <p class="text-justify">King Abdullaziz University, Faculty of Science, Building A90, 3rd Floor</p>
+              </div>
+            <div class="col-xs-6 col-md-3">
+              <h6>Scientific Programs</h6>
+              <ul class="footer-links">
+                <li><a href="#">Bachelor Degree</a></li>
+                <li><a href="#">Master Degree</a></li>
+                <li><a href="#">PhD Degree</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-xs-6 col-md-3">
+              <h6>Quick Links</h6>
+              <ul class="footer-links">
+                <li><a href="#">Home Page</a></li>
+                <li><a href="#">Department Administrative</a></li>
+                <li><a href="#">Faculty Members</a></li>
+                <li><a href="">Research Groups</a></li>
+                <li><a href="">Seminars</a></li>
+              </ul>
+            </div>
+          </div>
+          <hr>
+        </div>
+        <div class="container">
+          <div class="row">
+            <div class="col-md-8 col-sm-6 col-xs-12">
+              <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved by 
+           <a href="https://math.kau.edu.sa">Math Department, Science Faculty</a>.
+              </p>
+            </div>
+  
+            <div class="col-md-4 col-sm-6 col-xs-12">
+              <ul class="social-icons">
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="youtube" href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a class="phone" href="#"><i class="fa fa-phone-alt"></i></a></li>
+                <li><a class="whatsapp" data-bs-toggle="modal" data-bs-target="#whatsapp"><i class="fab fa-whatsapp"></i></a></li>   
+              </ul>
+            </div>
+          </div>
+        </div>
+  </footer>
         <!-- end of footer section -->
         <!-- Beginning of JS -->
         <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
@@ -1027,7 +1304,7 @@ $('#customers-testimonials').owlCarousel( {
 		autoplay: true,
 		dots:true,
     nav:true,
-		autoplayTimeout: 8500,
+		autoplayTimeout: 6500,
 		smartSpeed: 450,
   	navText: ['<i class="fa fa-angle-left"></i>','<i class="fa fa-angle-right"></i>'],
 		responsive: {
