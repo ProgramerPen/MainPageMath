@@ -37,6 +37,7 @@
             font-size: 1.3rem;
             
         }
+        
         a.navbar-brand span{
             font-size: 1.7rem;
             font-weight: 900;
@@ -58,7 +59,7 @@
             background-size: cover;
         }
         .carousel {
-            width: 70vw;
+            width: 100vw;
             padding-top:5rem;
         }
 
@@ -141,6 +142,7 @@
             padding: 30px;
             box-shadow: 0px 6px 17px #CFFF8D;
             margin-top: -30px;
+            
         }
 
         .events .card-title {
@@ -180,7 +182,13 @@
             font-size: 1.5rem;
             
         }
-
+        .card-body {
+          transition: 1s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+        }
+        .card-body:hover {
+          font-size: 1.5rem;
+          
+        }
         /* End Events */
 /* Awards */
 
@@ -471,7 +479,7 @@
     margin-left: auto;
     border-radius: 0.4rem;
     background: cover;
-    height: 400px;
+    height: 338px;
     width: 600px;
 }
 .spotlight div {
@@ -559,12 +567,39 @@
 {
   margin:0
 }
+.img-footer {
+  width:40%;
+}
 @media (max-width:991px)
 {
   .site-footer [class^=col-]
   {
     margin-bottom:30px
   }
+  .navbar-brand {
+    margin-right: 0 !important;
+    padding-right: 0 !important;
+  }
+  .kauTab p { 
+    margin: 1rem 0 1rem 0;
+    padding: 1rem 0;
+  }
+  .owl-prev, .owl-next {
+    display: none; 
+
+  }
+  .spotlight iframe {
+    border-radius: 0.4rem;
+    background: cover;
+    height: 240px;
+    width: 425px;
+    margin: 2rem 0;
+    transition-delay: 400ms;
+}
+.img-footer {
+  width:40%;
+  margin: 1rem auto;
+}
 }
 @media (max-width:767px)
 {
@@ -669,6 +704,27 @@
   display: inline-block;
 }
  /* End of Modals */
+ .hidden {
+  opacity: 0;
+  filter: blur(5px);
+  transform: translateX(-100%);
+  transition: all 1s;
+ }
+ .show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+ }
+ div.col-lg-4:nth-child(1) > div:nth-child(1) {
+  transition-delay: 200ms;
+}
+div.col-lg-4:nth-child(2) > div:nth-child(1) {
+  transition-delay: 500ms;
+}
+div.col-lg-4:nth-child(3) > div:nth-child(1) {
+  transition-delay: 800ms;
+}
+ 
         </style>
     </head>
     <body>
@@ -852,26 +908,26 @@
             <div id="overview" class="w3-container">
                 <div class="w3-row w3-animate-zoom">
                   <a href="javascript:void(0)" onclick="openTab(event, 'Overview');">
-                    <div  class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding w3-border-green ">Overview</div>
+                    <div  class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding w3-border-green hidden">Overview</div>
                   </a>
                   <a href="javascript:void(0)" onclick="openTab(event, 'Vision');">
-                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Vision</div>
+                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding hidden">Vision</div>
                   </a>
                   <a href="javascript:void(0)" onclick="openTab(event, 'Mission');">
-                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding">Mission</div>
+                    <div class="w3-third tablink w3-bottombar w3-hover-light-grey w3-padding hidden">Mission</div>
                   </a>
                 </div>
               
                 <div id="Overview" class="w3-container kauTab  w3-animate-right">
-                  <p class="overview">The Department of Mathematics was established at the same time as the Faculty of Science in the year 1973-1974, including a statistics section which has become an autonomous department in 1981 and Computer Science which has also become a department in 1985. Pure mathematics and applied mathematics are the key pedagogical and research domains of the department of mathematics, which are supported by the work and contribution of numerous academic staff, scientific researchers, and students at both undergraduate and graduate level. A major goal of the department is to effectively address current scientific problems by integrating theoratical notions and modern applied mathematics. Additional goals include research advancement, promotion of dialogue in the field of science, production of publications in renowned scientific journals, as well as active involvement in local and international conferences, scientific seminars, training programs and workshops. Furthermore, keeping abreast of the latest in scientific research, technological innovations, and smart education strategies is a priority for the deparment. Another important concern of the department is to stimulate a dialogue with experts in other scientific fields such as statistics, operations research, physics, various branches of engineering and to equip mathematics experts with the competencies needed to make a valuable contribution to nationwide development initiatives for state schools and universities. </p>
+                  <p class="overview hidden">The Department of Mathematics was established at the same time as the Faculty of Science in the year 1973-1974, including a statistics section which has become an autonomous department in 1981 and Computer Science which has also become a department in 1985. Pure mathematics and applied mathematics are the key pedagogical and research domains of the department of mathematics, which are supported by the work and contribution of numerous academic staff, scientific researchers, and students at both undergraduate and graduate level. A major goal of the department is to effectively address current scientific problems by integrating theoratical notions and modern applied mathematics. Additional goals include research advancement, promotion of dialogue in the field of science, production of publications in renowned scientific journals, as well as active involvement in local and international conferences, scientific seminars, training programs and workshops. Furthermore, keeping abreast of the latest in scientific research, technological innovations, and smart education strategies is a priority for the deparment. Another important concern of the department is to stimulate a dialogue with experts in other scientific fields such as statistics, operations research, physics, various branches of engineering and to equip mathematics experts with the competencies needed to make a valuable contribution to nationwide development initiatives for state schools and universities. </p>
                 </div>
               
                 <div id="Vision" class="w3-container kauTab w3-animate-right" style="display:none">
-                  <p>Leading in the academic and research fields and competing internationally.</p> 
+                  <p class="hidden">Leading in the academic and research fields and competing internationally.</p> 
                 </div>
               
                 <div id="Mission" class="w3-container kauTab w3-animate-right" style="display:none">
-                  <p>Affording sound scientific and research cadres and enriching advanced scientific research in the fields of mathematics and related applications.</p>
+                  <p class="hidden">Affording sound scientific and research cadres and enriching advanced scientific research in the fields of mathematics and related applications.</p>
                 </div>
               </div>
             <!-- <section id="about" class="about">
@@ -969,8 +1025,8 @@
                     </div>
             
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                            <div class="course-item">
+                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4  ">
+                            <div class="course-item hidden">
                                 <img src="https://i.ibb.co/KVkt9NP/program05.jpg" class="img-fluid" alt="...">
                                 <div class="course-content">
                                     <h3>Bachelor Program</h3>
@@ -983,8 +1039,8 @@
                             </div>
                         </div> <!-- End Program Item-->
             
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                            <div class="course-item">
+                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 ">
+                            <div class="course-item hidden">
                                 <img src="https://i.ibb.co/KVkt9NP/program05.jpg" class="img-fluid" alt="...">
                                 <div class="course-content">
                                     <h3>Master Program</h3>
@@ -997,8 +1053,8 @@
                             </div>
                         </div> <!-- End Program Item-->
             
-                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4">
-                            <div class="course-item">
+                        <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 ">
+                            <div class="course-item hidden">
                                 <img src="https://i.ibb.co/KVkt9NP/program05.jpg" class="img-fluid" alt="...">
                                 <div class="course-content">                
                                     <h3>Doctoral Program</h3>
@@ -1026,7 +1082,7 @@
                         <hr class="style-two">
                     </div>
                     <div class="row justify-content-center">
-                        <div class="col-md-6 d-flex align-items-stretch">
+                        <div class="col-md-6 d-flex align-items-stretch hidden">
                             <div class="eventSingle eventCard">
                                 <div class="card-img">
                                     <img src="https://i.ibb.co/DbKd7dk/events-2.jpg" alt="...">
@@ -1042,7 +1098,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-6 d-flex align-items-stretch">
+                        <div class="col-md-6 d-flex align-items-stretch hidden">
                             <div class="eventSingle eventCard">
                                 <div class="card-img">
                                     <img src="https://i.ibb.co/g3bnGj9/events-1.jpg" alt="...">
@@ -1074,7 +1130,7 @@
             <section class="testimonials">
                 <div class="container">
                   <div class="row">
-                    <div class="col-sm-12">
+                    <div class="col-sm-12 hidden">
                       <div id="customers-testimonials" class="owl-carousel">
             
                         <!--TESTIMONIAL 1 -->
@@ -1082,7 +1138,7 @@
                           <div class="shadow-effect">
                             <img class="img-responsive" src="https://www.yorku.ca/science/mathstats/wp-content/uploads/sites/62/2020/09/YU_CMSMathCamp2012-1024x768.jpeg" alt="">
                             <div class="item-details">
-                                                <h5>Saudian Mathematical Society <a href="#"><i class="fa fa-link"></i></a><span>4 Apr, 2019</span></h5>
+                                                <h5>Saudi Mathematical Society <a href="#"><i class="fa fa-link"></i></a><span>4 Apr, 2019</span></h5>
                                                 <p>Our department undertakes several outreach activities in cooperation with the Canadian Mathematical Society.</p>
                                             </div>
                           </div>
@@ -1131,7 +1187,7 @@
             </div>
             <section class="award">
 
-                <div class="section-title mb-5 text-center">
+                <div class="section-title mb-5 text-center ">
                     <hr class="style-two">  
                     <h2>Awards & Accreditation</h2>
                     <hr class="style-two">
@@ -1160,16 +1216,16 @@
       <section class="spotlight">
         <div class="container">
             <div class="row" >
-                <div class="col-sm-12 col-md-6 spotHead">
+                <div class="col-sm-12 col-md-6 spotHead hidden">
                    
 
                         <h1>Student Spotlights</h1>
                         <p>This video give a briefs talk about our students experiences in our Math Department which
-                            will cover student life in the university and another experiences
+                            will cover student life in the university and other experiences
                         </p>
                     
                 </div>
-                <div class="col-sm-12 col-md-6">
+                <div class="col-sm-12 col-md-6 hidden">
                     <iframe src="https://www.youtube.com/embed/dcya2ficWdo?autoplay=1&mute=1&controls=0">
                     </iframe>
                 </div>
@@ -1182,7 +1238,7 @@
         <div class="container">
           <div class="row">
             <div class="col-sm-12 col-md-6">
-                <img style="width:50%;" alt="جامعة الملك عبد العزيز" src="https://marz.kau.edu.sa/Files/13009/Galleries/8551/66274_logo_kau.png" /> 
+                <img class="img-footer" alt="جامعة الملك عبد العزيز" src="https://marz.kau.edu.sa/Files/13009/Galleries/8551/66274_logo_kau.png" /> 
                 <p class="text-justify">King Abdullaziz University, Faculty of Science, Building A90, 3rd Floor</p>
               </div>
             <div class="col-xs-6 col-md-3">
@@ -1403,5 +1459,19 @@ const app = new Vue({
 });
         </script>
         <!-- End Award Script -->
+        <!-- Show Beauty animation to the page -->
+        <script defer>
+          const observer = new IntersectionObserver((entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting){
+                  entry.target.classList.add('show');
+                } else {
+                  entry.target.classList.remove('show');
+                }
+              })
+          });
+          const hiddenElements = document.querySelectorAll('.hidden');
+          hiddenElements.forEach((el) => observer.observe(el));
+        </script>
     </body>
 </html>
